@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Header from '../../components/Header'
 
 export default function Home() {
   return (
@@ -7,9 +8,7 @@ export default function Home() {
         <title>Create Next App By Me</title>
         <link  rel='icon' href='/favicon.ico'/>
       </head>
-      {/*= header*/}
-      {/*= Banner*/}
-      <h1>Hello world</h1>
+      <Header/>
     </div>
   )
 }
