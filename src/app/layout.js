@@ -3,7 +3,6 @@ import './globals.css'
 import '../../styles/global.css'
 import { Inter } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
-import { useRouter } from 'next/router'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,11 +13,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  /*const router = useRouter()
-  router.events.on("routeChangeStart", progress.start);
-  router.events.on("routeChangeComplete", progress.finish);
-  router.events.on("routeChangeError", progress.finish);*/
-
   return (
     <html lang="en">
       <body className={inter.className}>
