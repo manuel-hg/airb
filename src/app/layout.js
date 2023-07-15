@@ -1,6 +1,10 @@
+"use client"; // This is a client component 
 import './globals.css'
 import '../../styles/global.css'
 import { Inter } from 'next/font/google'
+import NextTopLoader from 'nextjs-toploader'
+import { useRouter } from 'next/router'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,9 +14,26 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  /*const router = useRouter()
+  router.events.on("routeChangeStart", progress.start);
+  router.events.on("routeChangeComplete", progress.finish);
+  router.events.on("routeChangeError", progress.finish);*/
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NextTopLoader 
+      color="#2299DD"
+      initialPosition={0.08}
+      crawlSpeed={200}
+      height={3}
+      crawl={true}
+      showSpinner={true}
+      easing="ease"
+      speed={200}
+      shadow="0 0 10px #2299DD,0 0 5px #2299DD"/>
+        {children}
+        </body>
     </html>
   )
 }

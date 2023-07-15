@@ -1,3 +1,4 @@
+"use client"; 
 import "./globals.css";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -5,6 +6,7 @@ import SmallCard from "./components/SmallCard";
 import MediumCard from "./components/MediumCard";
 import LargeCard from "./components/LargeCard";
 import Footer from "./components/Footer";
+import { useEffect, useState } from "react";
 
 /*export async function getStaticProps(){
   const apiResponse = await fetch('https://dummyjson.com/users');
@@ -62,6 +64,7 @@ export default function Home() {
     { img: "https://links.papareact.com/s03", title: "Entire homes" },
     { img: "https://links.papareact.com/8ix", title: "Pet allowed" },
   ];
+
   return (
     <>
       <Header />
@@ -96,18 +99,9 @@ export default function Home() {
           buttontext="Get Inspired"
         />
       </main>
-      <Footer />
+      <Footer  />
     </>
   );
 }
-/*export async function getStaticProps() {
-  const url = 'https://www.jsonkeeper.com/b/4G1G';
-  const res = await fetch(url)
-  const posts = [{texto:'text'}];
 
-  return {
-    props: {
-      posts,
-    },
-  }
-}*/
+

@@ -16,7 +16,9 @@ module.exports = {
     },
     
   },
+  external: [ 'react', 'react-is', 'react-router', 'react/jsx-runtime' ],
   plugins: [
-    require("tailwind-scrollbar-hide")
+    require("tailwind-scrollbar-hide"),
+    require("nextjs-toploader")
   ],
 }
